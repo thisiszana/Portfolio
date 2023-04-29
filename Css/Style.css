@@ -26,15 +26,51 @@ body {
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    position: fixed;
-    left: 270px;
-    top: 0;
-    right: 0;
-    z-index: 0;
+    padding: 0 30px;
     opacity: 1;
 }
 
-/* aside */
+.main-content {
+    padding-left: 270px;
+}
+
+.padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+
+.btn {
+    font-size: 16px;
+    font-weight: 500px;
+    padding: 12px 35px;
+    background: var(--skin-color);
+    border-radius: 40px;
+    color: #fff;
+    display: inline-block;
+    white-space: nowrap;
+    border: none;
+    transition: all .3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Aside */
 .aside {
     width: 270px;
     height: 100%;
@@ -104,7 +140,7 @@ body {
     top: 20px;
     border-radius: 5px;
     background: var(--bg-black-100);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -160,4 +196,78 @@ body {
 
 .aside .nav li a i {
     margin-right: 15px;
+}
+
+/* Home */
+.home {
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+
+.home .home-info {
+    flex: 0 0 60%;
+    width: 60%;
+}
+
+.home h3.hello {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.home h3.hello span {
+    font-family: 'Clicker script', cursive;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--skin-color);
+}
+
+.home h3.my-profession {
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.home .home-info p {
+    color: var(--text-black-700);
+    font-size: 20px;
+    margin-bottom: 70px;
+}
+
+.typing {
+    color: var(--skin-color);
+}
+
+.home .home-img {
+    flex: 0 0 40%;
+    width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+.home  .home-img::after {
+    content: ' ';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-right: 10px solid var(--skin-color);
+    border-bottom: 10px solid var(--skin-color);
+    right: 70px;
+    bottom: -80px;
+}
+
+.home  .home-img::before {
+    content: ' ';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-left: 10px solid var(--skin-color);
+    border-top: 10px solid var(--skin-color);
+    left: 70px;
+    top: -80px;
+}
+
+.home .home-img img {
+    width: 200px;
+    border-radius: 8px;
+    margin: auto;
 }
